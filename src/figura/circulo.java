@@ -5,15 +5,18 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class circulo extends JFrame {
     
-    static private int r;
+    private int r;
     private double area, perimetro;
-    public circulo(int r){
+    public circulo(){
+        
+        r=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el radio del circulo"));
+        
         setTitle("Dibujando círculo con un radio de: "+r);
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        this.r=r;
+        
     }
     @Override
     public void paint(Graphics g){

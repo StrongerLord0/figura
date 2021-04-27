@@ -124,7 +124,7 @@ public class GUI extends JFrame implements ActionListener {
         if (k.getSource() == btnCirculo) {
             try {
                 this.setVisible(false);
-                //crc.Interfaz();
+                circulo cr = new circulo();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Por favor, ingresa un valor"
                         + " que sea valido y logico, o cumple la indicación dada.",
@@ -135,7 +135,7 @@ public class GUI extends JFrame implements ActionListener {
         if (k.getSource() == btnCuadrado) {
             try {
                 this.setVisible(false);
-                //cdr.Grafica();
+                cuadrado cd = new cuadrado();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Por favor, ingresa un valor"
                         + " que sea valido y logico, o cumple la indicación dada.",
