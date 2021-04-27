@@ -7,6 +7,7 @@ public class Figura {
         System.out.println("aki calando nomas");
         triangulo cr = new triangulo();
         cr.procesoCompleto();
+        //Hola
     }
     
 }
