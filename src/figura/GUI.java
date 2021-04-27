@@ -45,7 +45,7 @@ public class GUI extends JFrame implements ActionListener {
         add(btnCirculo);
         btnCirculo.addActionListener(this);
 
-        btnCuadrado = new JButton("Proyecto 2: Arreglos Unidimensionales y Bidimensionales");
+        btnCuadrado = new JButton("Cuadrado");
         btnCuadrado.setBounds(35, 150, 370, 30);
         btnCuadrado.setBackground(new Color(6, 3, 126));
         btnCuadrado.setForeground(new Color(255, 255, 255));
@@ -53,8 +53,16 @@ public class GUI extends JFrame implements ActionListener {
         add(btnCuadrado);
         btnCuadrado.addActionListener(this);
 
+        btnTriangulo = new JButton("Triangulo");
+        btnTriangulo.setBounds(35, 200, 370, 30);
+        btnTriangulo.setBackground(new Color(6, 3, 126));
+        btnTriangulo.setForeground(new Color(255, 255, 255));
+        btnTriangulo.setEnabled(true);
+        add(btnTriangulo);
+        btnTriangulo.addActionListener(this);
+        
         btnSalir = new JButton("Salir del Sistema");
-        btnSalir.setBounds(35, 200, 370, 30);
+        btnSalir.setBounds(35, 250, 370, 30);
         btnSalir.setBackground(new Color(6, 3, 126));
         btnSalir.setForeground(new Color(255, 255, 255));
         add(btnSalir);
@@ -78,7 +86,7 @@ public class GUI extends JFrame implements ActionListener {
         jlNombre3.setForeground(new Color(245, 245, 245));
         add(jlNombre3);
 
-        ImageIcon imagen = new ImageIcon("src/images/tec.png");
+        ImageIcon imagen = new ImageIcon("src/images/figurative.png");
         jlImagen3 = new JLabel(imagen);
         jlImagen3.setBounds(15, 10, 65, 71);
         add(jlImagen3);
@@ -91,7 +99,7 @@ public class GUI extends JFrame implements ActionListener {
     // Se crea la interfaz donde todos los elementos se plasmaran
     public void GUI() {
         GUI gui = new GUI();
-        gui.setBounds(0, 0, 450, 360);
+        gui.setBounds(0, 0, 450, 400);
         gui.setResizable(false);
         gui.setVisible(true);
         gui.setLocationRelativeTo(null);
