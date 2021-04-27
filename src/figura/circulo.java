@@ -4,6 +4,7 @@ import javax.swing.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class circulo extends JFrame {
+    
     static private int r;
     private double area, perimetro;
     public circulo(int r){
