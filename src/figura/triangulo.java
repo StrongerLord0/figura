@@ -29,9 +29,12 @@ public class triangulo extends JComponent {
         double refx=t*mid/2;
         double refy=t*z[2]+t;
         g.setColor(colorpurple);
-        g.drawLine((int)(refx), (int)(refy), (int)(refx+t*z[0]), (int)(refy));
-        g.drawLine((int)(refx), (int)(refy), (int)((refx)+(t*x1)), (int)((refy)-(t*y1)));
-        g.drawLine((int)((refx)+(t*x1)), (int)((refy)-(t*y1)),(int)(refx+t*z[0]),(int)(refy));
+        
+        int[] ux={(int)(refx),(int)(refx+t*z[0]),(int)((refx)+(t*x1))};
+        int[] uy={(int)(refy),(int)(refy),(int)((refy)-(t*y1))};
+        
+        g.drawPolygon(ux,uy,3);
+        g.fillPolygon(ux,uy,3);
         
         }
         public void trianguloProceso(){

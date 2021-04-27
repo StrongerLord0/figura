@@ -43,7 +43,8 @@ public class cuadrado extends JFrame {
               g.drawLine(mid,0,mid,600);
               g.drawLine(0,mid,600,mid);
               g.setColor(colorpurple);
-              g.drawRect(mid-(z*a/2), mid-(z*l/2), a*z, l*z);       
+              g.drawRect(mid-(z*a/2), mid-(z*l/2), a*z, l*z);
+              g.fillRect(mid-(z*a/2), mid-(z*l/2), a*z, l*z);
     }
     public String procesoCompleto(){
         area=l*a;

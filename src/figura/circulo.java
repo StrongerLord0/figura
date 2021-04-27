@@ -36,7 +36,8 @@ public class circulo extends JFrame {
         g.drawLine(0,mid,600,mid);
         
         g.setColor(colorpurple);
-        g.drawOval(mid-(z*r), mid-(z*r), 2*r*z, 2*r*z);  
+        g.drawOval(mid-(z*r), mid-(z*r), 2*r*z, 2*r*z); 
+        g.fillOval(mid-(z*r), mid-(z*r), 2*r*z, 2*r*z);
     } 
 //Dibuja un circulo
     public String procesoCompleto(){
