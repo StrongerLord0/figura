@@ -5,18 +5,22 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class circulo extends JFrame {
     
-    private int r;
+    static private int r;
     private double area, perimetro;
     public circulo(){
-        
-        r=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el radio del circulo"));
-        
+        UIManager.put("OptionPane.background", new Color(0, 0, 0));
+        UIManager.put("Panel.background", new Color(0, 0, 0));
+        UIManager.put("OptionPane.messageForeground", new Color(245, 245, 245));
+        UIManager.put("Button.background", new Color(113, 0, 178));
+        UIManager.put("Button.foreground", new Color(255, 255, 255));
+        UIManager.put("TextField.background", new Color(255, 255, 255));
+        r=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el valor del radio","circulo",JOptionPane.INFORMATION_MESSAGE));
         setTitle("Dibujando círculo con un radio de: "+r);
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        
+        this.r=r;
     }
     @Override
     public void paint(Graphics g){

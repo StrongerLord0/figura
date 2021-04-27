@@ -41,7 +41,7 @@ public class triangulo extends JComponent {
                 
         for(int i=0;i<3;i++){
     
-            x[i]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese la medida en forma numérica del lado "+(i+1)));
+            x[i]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese la medida en forma numérica del lado "));
             
         }
         
@@ -66,6 +66,12 @@ public class triangulo extends JComponent {
         
         
         public void procesoCompleto(){
+                UIManager.put("OptionPane.background", new Color(0, 0, 0));
+                UIManager.put("Panel.background", new Color(0, 0, 0));
+                UIManager.put("OptionPane.messageForeground", new Color(245, 245, 245));
+                UIManager.put("Button.background", new Color(113, 0, 178));
+                UIManager.put("Button.foreground", new Color(255, 255, 255));
+                UIManager.put("TextField.background", new Color(255, 255, 255));
               trianguloProceso();
               magic();
               JFrame jFrame = new JFrame(mensaje);

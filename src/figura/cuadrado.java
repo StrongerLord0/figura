@@ -6,20 +6,28 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class cuadrado extends JFrame {
-    private int l,a;
+    static private int l,a;
     private double area, perimetro;
     
     public cuadrado(){
-        l=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el lado del cuadrilatero"));
-        a=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el ancho del cuadrilatero"));
-        
+        UIManager.put("OptionPane.background", new Color(0, 0, 0));
+        UIManager.put("Panel.background", new Color(0, 0, 0));
+        UIManager.put("OptionPane.messageForeground", new Color(245, 245, 245));
+        UIManager.put("Button.background", new Color(113, 0, 178));
+        UIManager.put("Button.foreground", new Color(255, 255, 255));
+        UIManager.put("TextField.background", new Color(255, 255, 255));
+        l=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el lado del cuadrado","cuadrado",JOptionPane.INFORMATION_MESSAGE));
+        a=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el ancho del cuadrado","cuadrado",JOptionPane.INFORMATION_MESSAGE));
         setTitle("Dibujando cuadrado con lados de: "+a+" * "+l);
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        this.l=l;
+        this.a=a;
     }
     @Override
     public void paint(Graphics g){
