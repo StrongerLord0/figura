@@ -54,7 +54,7 @@ public class triangulo extends JComponent {
                mensaje="Triángulo isóceles";    
             }    
                else {
-               mensaje="Triángulo escaleno";
+               mensaje="Triángulo escaleno ";
         }
       } else{
             JOptionPane.showMessageDialog(null,"El triángulo no es formable");
